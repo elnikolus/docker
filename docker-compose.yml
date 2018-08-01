@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  web:
+    image: webdevops/php-nginx:7.2
+    volumes:
+      - ${PHP_APP}:/app
+    ports:
+      - 8081:80
+
+  # mysql:
+  #   image: mysql:5.7
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD
+  #     - MYSQL_DATABASE
+  #   volumes:
+  #     - ${DATA_PATH}/mysql:/var/lib/mysql
+  #   ports:
+  #     - 3306:3306
